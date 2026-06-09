@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const active = [
-  { label: 'Inmobiliarias', detail: 'Calificación de leads por WhatsApp', href: '/casos#inmobiliarias' },
-  { label: 'Ganadería', detail: 'App de gestión operativa', href: '/casos#ganaderia' },
-  { label: 'Indumentaria', detail: 'Inventario y reservas', href: '/casos#indumentaria' },
-  { label: 'Concesionarias', detail: 'Stock y cuotas', href: '/casos#concesionarias' },
+  { label: 'Inmobiliarias', detail: 'Calificación de leads por WhatsApp', href: '/proyectos' },
+  { label: 'Ganadería', detail: 'App de gestión operativa', href: '/proyectos' },
+  { label: 'Indumentaria', detail: 'Inventario y reservas', href: '/proyectos' },
+  { label: 'Concesionarias', detail: 'Stock y cuotas', href: '/proyectos' },
 ]
 
 const radar = ['Gastronomía', 'Salud', 'Contabilidad', 'Turismo', 'Pesca', 'Fútbol', 'Pymes con procesos repetitivos']
