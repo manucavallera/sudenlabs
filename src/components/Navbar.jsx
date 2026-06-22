@@ -76,8 +76,14 @@ export default function Navbar() {
         transition: 'all 0.3s ease',
       }}>
         {/* Logo */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/logo.jpg" alt="Suden Labs" style={{ height: '36px', width: 'auto', display: 'block' }} />
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <span style={{
+            fontFamily: "'Space Grotesk', sans-serif",
+            fontWeight: 700,
+            fontSize: '1.25rem',
+            color: 'var(--text)',
+            letterSpacing: '-0.02em',
+          }}>Suden Labs</span>
         </Link>
 
         {/* Desktop links */}
