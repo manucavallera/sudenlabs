@@ -13,6 +13,7 @@ import Nosotros from './pages/Nosotros'
 import Contacto from './pages/Contacto'
 import Proyectos from './pages/Proyectos'
 import Gestion from './pages/Gestion'
+import Metodo from './pages/Metodo'
 import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
@@ -34,6 +35,7 @@ function Layout() {
         <Route path="/casos" element={<Casos />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/metodo" element={<Metodo />} />
         <Route path="/gestion" element={<Gestion />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="*" element={<NotFound />} />
