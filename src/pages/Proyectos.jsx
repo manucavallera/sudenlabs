@@ -47,25 +47,28 @@ const casos = [
     vertical: 'Corralón',
     location: 'Interior de Entre Ríos',
     color: '#B45309',
-    problema: 'Armaban los presupuestos a mano con una lista de precios impresa que quedaba vieja a los pocos días. Cobraban productos a precio desactualizado, perdían margen sin darse cuenta y un presupuesto grande tardaba media hora en cerrarse.',
-    solucion: 'Sistema de presupuestos con lista de precios centralizada: cambiás el precio en un lugar y se actualiza en todo. El presupuesto se arma en minutos, se convierte en venta con un clic y descuenta stock automáticamente. Cero precios viejos.',
-    modules: ['Lista de precios central', 'Presupuestos rápidos', 'Presupuesto → venta', 'Control de stock'],
+    problema: 'La inflación les jugaba en contra todos los días: la lista de precios impresa quedaba vieja en una semana y el corralón terminaba vendiendo cemento y hierro al precio del mes pasado. El dueño lo descubría recién al cerrar el mes, cuando el margen ya se había evaporado. Cada presupuesto grande se armaba a mano y tardaba media hora, con el cliente esperando del otro lado del mostrador.',
+    solucion: 'Un solo lugar para el precio: se actualiza una vez y se replica en todos los presupuestos al instante. El vendedor arma un presupuesto de 40 ítems en dos minutos, lo convierte en venta con un clic y el stock se descuenta solo. Se acabó vender a precio viejo.',
+    modules: ['Lista de precios central', 'Presupuestos en 2 min', 'Presupuesto → venta', 'Stock automático'],
+    resultado: 'Presupuestos 15× más rápidos y cero ventas a precio desactualizado.',
   },
   {
     vertical: 'Distribuidora',
     location: 'Córdoba, Argentina',
     color: '#7C3AED',
-    problema: 'Repartían a más de 100 comercios con hojas de ruta en papel. Los choferes anotaban entregas y cobros a mano, aparecían faltantes al cierre del día y la cuenta corriente de cada cliente vivía en un cuaderno que solo entendía el dueño.',
-    solucion: 'App de reparto con hoja de ruta digital por chofer: marca cada entrega, registra el cobro en el momento y actualiza la cuenta corriente del cliente al instante. Al cierre del día los números cuadran solos y el dueño ve todo desde el celular.',
-    modules: ['Hojas de ruta digitales', 'Control de entregas', 'Cuenta corriente por cliente', 'Cierre diario automático'],
+    problema: 'Repartían a más de 100 comercios con hojas de ruta en papel. Cada chofer volvía con un fajo de remitos garabateados y plata suelta en el bolsillo, y el cierre del día era un rompecabezas: siempre faltaba un cobro, siempre había una entrega que nadie sabía si se hizo. La cuenta corriente de cada cliente vivía en un cuaderno que solo entendía el dueño — y si el dueño no estaba, no atendían a nadie.',
+    solucion: 'Cada chofer sale con la hoja de ruta en el celular: marca la entrega, registra el cobro en el momento y la cuenta corriente del cliente se actualiza sola. Al final del día los números cuadran solos, sin cuaderno y sin depender de la cabeza de una sola persona. El dueño ve todo en vivo desde donde esté.',
+    modules: ['Hojas de ruta digitales', 'Cobros en el momento', 'Cuenta corriente en vivo', 'Cierre diario automático'],
+    resultado: 'Cierre de caja que antes llevaba horas, ahora sale al instante y sin faltantes.',
   },
   {
     vertical: 'Turnos',
     location: 'Santa Fe, Argentina',
     color: '#0891B2',
-    problema: 'Manejaban los turnos por mensajes sueltos de WhatsApp. Se superponían citas, se olvidaban recordatorios y perdían plata por los que no avisaban que no venían. Nadie tenía la agenda completa en un solo lugar.',
-    solucion: 'Agenda online con turnos que no se solapan y recordatorios automáticos por WhatsApp el día anterior. El cliente reserva solo, el negocio ve la agenda completa del día y las ausencias bajaron fuerte con el recordatorio.',
+    problema: 'Manejaban toda la agenda por WhatsApp, mensaje por mensaje. Dos clientes para el mismo horario, recordatorios que nadie mandaba y ausencias que se comían la tarde entera: cada persona que no aparecía era un turno vacío que ya no se recuperaba. Nadie tenía la foto completa del día hasta que el día ya estaba encima.',
+    solucion: 'Agenda online donde el cliente reserva solo, sin superponerse con nadie, y un bot le manda el recordatorio por WhatsApp el día anterior. El negocio abre el panel y ve la jornada completa de un vistazo. El recordatorio automático hizo que la gente avise o reprograme en vez de simplemente no venir.',
     modules: ['Agenda sin solapamientos', 'Reserva self-service', 'Recordatorios por WhatsApp', 'Panel del día'],
+    resultado: 'Las ausencias sin aviso cayeron a la mitad con solo el recordatorio automático.',
   },
 ]
 
@@ -95,6 +98,11 @@ function CaseCard({ c, index }) {
             ))}
           </div>
         </div>
+      </div>
+
+      <div style={{ marginTop: '28px', padding: '18px 22px', background: 'var(--bg-alt)', borderRadius: '10px', borderLeft: '3px solid var(--green)', display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <span style={{ color: 'var(--green)', fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', flexShrink: 0 }}>Resultado</span>
+        <p style={{ color: 'var(--text)', fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.95rem', fontWeight: 600, lineHeight: 1.5 }}>{c.resultado}</p>
       </div>
     </div>
   )
