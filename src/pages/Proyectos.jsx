@@ -81,7 +81,6 @@ function CaseCard({ c, index }) {
     >
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', flexWrap: 'wrap' }}>
         <span style={{ background: c.color, borderRadius: '6px', padding: '4px 10px', fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.7rem', fontWeight: 700, color: '#fff' }}>{c.vertical}</span>
-        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontFamily: "'Space Grotesk', sans-serif" }}>📍 {c.location}</span>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', alignItems: 'start' }} className="grid-2">
@@ -213,9 +212,6 @@ function ProjectCard({ p, index }) {
       <div style={{ padding: '32px 36px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'start' }}>
         {/* Left: name + description */}
         <div>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontFamily: "'Space Grotesk', sans-serif", marginBottom: '8px' }}>
-            📍 {p.location}
-          </p>
           <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: '1.5rem', letterSpacing: '-0.5px', marginBottom: '10px' }}>
             {p.name}
           </h3>
