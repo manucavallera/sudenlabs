@@ -284,7 +284,7 @@ export default function Proyectos() {
               +15 casos de éxito.<br />Estos son algunos.
             </h1>
             <p style={{ color: 'var(--text-sec)', fontSize: '1rem', lineHeight: 1.75 }}>
-              Llevamos más de 15 proyectos resueltos para negocios reales del interior. Estos son algunos: apps en producción antes de que Suden Labs existiera como nombre. Pasá el mouse sobre cada captura para ver el detalle.
+              Llevamos más de 15 proyectos resueltos para negocios reales del interior. Estos son algunos: apps en producción antes de que Suden Labs existiera como nombre.
             </p>
           </div>
         </div>
