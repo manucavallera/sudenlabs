@@ -42,6 +42,64 @@ const projects = [
   },
 ]
 
+const casos = [
+  {
+    vertical: 'Corralón',
+    location: 'Interior de Entre Ríos',
+    color: '#B45309',
+    problema: 'Armaban los presupuestos a mano con una lista de precios impresa que quedaba vieja a los pocos días. Cobraban productos a precio desactualizado, perdían margen sin darse cuenta y un presupuesto grande tardaba media hora en cerrarse.',
+    solucion: 'Sistema de presupuestos con lista de precios centralizada: cambiás el precio en un lugar y se actualiza en todo. El presupuesto se arma en minutos, se convierte en venta con un clic y descuenta stock automáticamente. Cero precios viejos.',
+    modules: ['Lista de precios central', 'Presupuestos rápidos', 'Presupuesto → venta', 'Control de stock'],
+  },
+  {
+    vertical: 'Distribuidora',
+    location: 'Córdoba, Argentina',
+    color: '#7C3AED',
+    problema: 'Repartían a más de 100 comercios con hojas de ruta en papel. Los choferes anotaban entregas y cobros a mano, aparecían faltantes al cierre del día y la cuenta corriente de cada cliente vivía en un cuaderno que solo entendía el dueño.',
+    solucion: 'App de reparto con hoja de ruta digital por chofer: marca cada entrega, registra el cobro en el momento y actualiza la cuenta corriente del cliente al instante. Al cierre del día los números cuadran solos y el dueño ve todo desde el celular.',
+    modules: ['Hojas de ruta digitales', 'Control de entregas', 'Cuenta corriente por cliente', 'Cierre diario automático'],
+  },
+  {
+    vertical: 'Turnos',
+    location: 'Santa Fe, Argentina',
+    color: '#0891B2',
+    problema: 'Manejaban los turnos por mensajes sueltos de WhatsApp. Se superponían citas, se olvidaban recordatorios y perdían plata por los que no avisaban que no venían. Nadie tenía la agenda completa en un solo lugar.',
+    solucion: 'Agenda online con turnos que no se solapan y recordatorios automáticos por WhatsApp el día anterior. El cliente reserva solo, el negocio ve la agenda completa del día y las ausencias bajaron fuerte con el recordatorio.',
+    modules: ['Agenda sin solapamientos', 'Reserva self-service', 'Recordatorios por WhatsApp', 'Panel del día'],
+  },
+]
+
+function CaseCard({ c, index }) {
+  const ref = useScrollReveal({ delay: index * 0.1 })
+  return (
+    <div ref={ref} style={{ border: '1px solid var(--border)', borderRadius: '16px', background: 'var(--bg-card)', padding: '32px 36px', transition: 'border-color 0.2s' }}
+      onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--border-hover)'}
+      onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--border)'}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', flexWrap: 'wrap' }}>
+        <span style={{ background: c.color, borderRadius: '6px', padding: '4px 10px', fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.7rem', fontWeight: 700, color: '#fff' }}>{c.vertical}</span>
+        <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontFamily: "'Space Grotesk', sans-serif" }}>📍 {c.location}</span>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', alignItems: 'start' }} className="grid-2">
+        <div>
+          <p style={{ color: 'var(--text-muted)', fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '10px' }}>El problema</p>
+          <p style={{ color: 'var(--text-sec)', fontSize: '0.9rem', lineHeight: 1.75 }}>{c.problema}</p>
+        </div>
+        <div>
+          <p style={{ color: 'var(--green)', fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '10px' }}>Lo que resolvimos</p>
+          <p style={{ color: 'var(--text)', fontSize: '0.9rem', lineHeight: 1.75, marginBottom: '18px' }}>{c.solucion}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {c.modules.map((m, i) => (
+              <span key={i} style={{ background: 'var(--bg-alt)', border: '1px solid var(--border)', color: 'var(--text-sec)', fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.75rem', padding: '5px 12px', borderRadius: '100px' }}>{m}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function ProjectCard({ p, index }) {
   const [hovered, setHovered] = useState(false)
   const ref = useScrollReveal({ delay: index * 0.1 })
@@ -215,16 +273,29 @@ export default function Proyectos() {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'end' }} className="grid-2">
             <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 700, letterSpacing: '-1.5px', lineHeight: 1.05 }}>
-              Producto real<br />antes que marca.
+              +15 casos de éxito.<br />Estos son algunos.
             </h1>
             <p style={{ color: 'var(--text-sec)', fontSize: '1rem', lineHeight: 1.75 }}>
-              Estas apps están funcionando en producción antes de que Suden Labs existiera como nombre. Pasá el mouse sobre cada captura para ver el detalle.
+              Llevamos más de 15 proyectos resueltos para negocios reales del interior. Estos son algunos: apps en producción antes de que Suden Labs existiera como nombre. Pasá el mouse sobre cada captura para ver el detalle.
             </p>
           </div>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', paddingBottom: '120px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           {projects.map((p, i) => <ProjectCard key={p.id} p={p} index={i} />)}
+        </div>
+
+        {/* Casos sin captura — problema → solución */}
+        <div style={{ padding: '80px 0 40px' }}>
+          <p style={{ fontFamily: "'Space Grotesk', sans-serif", color: 'var(--green)', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '14px' }}>
+            Más casos resueltos
+          </p>
+          <p style={{ color: 'var(--text-sec)', fontSize: '0.95rem', lineHeight: 1.7, maxWidth: '560px' }}>
+            No todos tienen captura pública, pero sí un problema concreto que resolvimos. Estos son algunos más.
+          </p>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', paddingBottom: '120px' }}>
+          {casos.map((c, i) => <CaseCard key={i} c={c} index={i} />)}
         </div>
 
         <div style={{ borderTop: '1px solid var(--border)', padding: '60px 0 100px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '24px' }}>
