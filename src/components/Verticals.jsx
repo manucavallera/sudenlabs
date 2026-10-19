@@ -6,7 +6,7 @@ const active = [
   { label: 'Inmobiliarias', detail: 'Calificación de leads por WhatsApp', href: '/proyectos' },
   { label: 'Ganadería', detail: 'App de gestión operativa', href: '/proyectos' },
   { label: 'Indumentaria', detail: 'Inventario y reservas', href: '/proyectos' },
-  { label: 'Concesionarias', detail: 'Stock y cuotas', href: '/proyectos' },
+  { label: 'Concesionarias', detail: 'Stock, cuotas y guardería', href: '/gestion' },
 ]
 
 const radar = ['Gastronomía', 'Salud', 'Contabilidad', 'Turismo', 'Pesca', 'Fútbol', 'Pymes con procesos repetitivos']
@@ -57,7 +57,7 @@ export default function Verticals() {
               Probado en campo.<br />No en PowerPoint.
             </h2>
             <p style={{ color: 'var(--text-sec)', fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '360px', marginBottom: '28px' }}>
-              Cuando Franco habla con un cliente, ya tiene tres aplicaciones funcionando para mostrar. Eso pesa diferente a un portfolio de mockups.
+              Cuando hablamos con un cliente, ya tenemos aplicaciones funcionando para mostrar. Eso pesa diferente a un portfolio de mockups.
             </p>
             <Link to="/proyectos" style={{
               color: 'var(--green)', fontFamily: "'Space Grotesk', sans-serif",

@@ -1,3 +1,4 @@
+import { waLink } from '../config'
 import { Link } from 'react-router-dom'
 
 const cols = [
@@ -27,7 +28,7 @@ const cols = [
       { to: '/casos#inmobiliarias', label: 'Inmobiliarias' },
       { to: '/casos#ganaderia', label: 'Ganadería' },
       { to: '/casos#indumentaria', label: 'Indumentaria' },
-      { to: '/casos#concesionarias', label: 'Concesionarias' },
+      { to: '/gestion', label: 'Concesionarias' },
     ],
   },
 ]
@@ -61,7 +62,7 @@ export default function Footer() {
               Laboratorio de productos tecnológicos. Del sur del mundo, para cualquier parte.
             </p>
             <a
-              href="https://wa.me/5493434907989"
+              href={waLink()}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -113,10 +114,10 @@ export default function Footer() {
           alignItems: 'center', flexWrap: 'wrap', gap: '16px',
         }}>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.78rem', fontFamily: "'Space Grotesk', sans-serif" }}>
-            © 2026 Suden Labs · Córdoba & Noreste, Argentina
+            © 2026 Suden Labs · Entre Ríos, Argentina
           </p>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.78rem', fontFamily: "'Space Grotesk', sans-serif" }}>
-            Franco · Manu
+            Hecho por Manu Cavallera
           </p>
         </div>
       </div>

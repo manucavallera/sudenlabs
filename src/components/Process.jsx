@@ -1,8 +1,8 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const steps = [
-  { num: '01', title: 'Entendemos el problema', desc: 'Franco habla con el cliente. Escucha antes de proponer nada. El brief describe el problema que duele, no la solución que imaginamos.' },
-  { num: '02', title: 'Cerramos el alcance', desc: 'Manu analiza lo técnico. Tiempos reales, alcance definido. Sin promesas vagas, sin cambios de precio a mitad de camino.' },
+  { num: '01', title: 'Entendemos el problema', desc: 'Hablamos con vos y escuchamos antes de proponer nada. El brief describe el problema que duele, no la solución que imaginamos.' },
+  { num: '02', title: 'Cerramos el alcance', desc: 'Analizamos lo técnico. Tiempos reales, alcance definido. Sin promesas vagas, sin cambios de precio a mitad de camino.' },
   { num: '03', title: 'Construimos y mostramos', desc: 'El cliente ve código corriendo antes de comprometerse a pagar. No wireframes, no mockups. Sistema real con datos reales.' },
 ]
 

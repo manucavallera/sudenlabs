@@ -43,7 +43,7 @@ export default function Metodo() {
             Somos un laboratorio.<br /><span style={{ color: 'var(--text-sec)', fontWeight: 400 }}>No una agencia. La diferencia es el método.</span>
           </h1>
           <p style={{ color: 'var(--text-sec)', fontSize: '1rem', lineHeight: 1.75, maxWidth: '620px' }}>
-            No tenemos capas de gerentes, ni equipos de ventas, ni departamentos de "customer success". Somos Manu y Franco. Los mismos que te responden el mail, escriben el código y se aseguran de que todo funcione a las 3 de la mañana si hace falta.
+            No tenemos capas de gerentes, ni equipos de ventas, ni departamentos de "customer success". Hablás directo con quien construye. El mismo que te responde el mensaje, escriben el código y se aseguran de que todo funcione a las 3 de la mañana si hace falta.
           </p>
         </div>
 

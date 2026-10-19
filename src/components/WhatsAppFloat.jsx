@@ -1,3 +1,4 @@
+import { waLink } from '../config'
 import { useState, useEffect } from 'react'
 
 export default function WhatsAppFloat() {
@@ -32,7 +33,7 @@ export default function WhatsAppFloat() {
         </div>
       )}
       <a
-        href="https://wa.me/5493434907989"
+        href={waLink()}
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.boxShadow = '0 4px 32px rgba(57,255,20,0.6)'; setTooltip(true) }}

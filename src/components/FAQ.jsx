@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: '¿Necesito saber de tecnología para trabajar con ustedes?',
-    a: 'No. Describís el problema como lo vivís en el día a día. Franco se encarga de entenderlo y traducirlo. Manu construye. Vos revisás si lo que se construye resuelve lo que describiste.',
+    a: 'No. Describís el problema como lo vivís en el día a día. Nosotros lo traducimos a un sistema. Vos revisás si lo que se construye resuelve lo que describiste.',
   },
   {
     q: '¿Qué pasa cuando el proyecto termina?',

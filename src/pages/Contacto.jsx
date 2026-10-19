@@ -1,3 +1,4 @@
+import { waLink } from '../config'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useState, useEffect } from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
@@ -8,7 +9,7 @@ const methods = [
   {
     label: 'WhatsApp',
     desc: 'Respuesta en el día. La forma más directa.',
-    href: 'https://wa.me/5493434907989',
+    href: waLink(),
     cta: 'Escribir ahora',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -53,7 +54,7 @@ export default function Contacto() {
     const text = encodeURIComponent(
       `Hola Suden Labs!\n\nNombre: ${form.nombre}\nEmpresa: ${form.empresa}\nVertical: ${form.vertical}\n\nMensaje: ${form.mensaje}`
     )
-    window.open(`https://wa.me/5493434907989?text=${text}`, '_blank')
+    window.open(`${waLink()}?text=${text}`, '_blank')
     setLoading(false)
     setSent(true)
   }
@@ -141,7 +142,7 @@ export default function Contacto() {
                 color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '16px',
               }}>Suden Labs</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {['📍 Córdoba, Argentina', '📍 Entre Ríos, Argentina', '🌎 Operación 100% remota', '⏱ Respuesta en el día hábil'].map((item, i) => (
+                {['📍 Entre Ríos, Argentina', '🌎 Operación 100% remota', '⏱ Respuesta en el día hábil'].map((item, i) => (
                   <p key={i} style={{ color: 'var(--text-sec)', fontSize: '0.875rem' }}>{item}</p>
                 ))}
               </div>

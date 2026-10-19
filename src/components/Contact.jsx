@@ -1,3 +1,4 @@
+import { waLink } from '../config'
 export default function Contact() {
   return (
     <section id="contacto" style={{
@@ -61,7 +62,7 @@ export default function Contact() {
         </p>
 
         <a
-          href="https://wa.me/5493434907989"
+          href={waLink()}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -112,7 +113,7 @@ export default function Contact() {
             <span style={{ color: '#333' }}>uden Labs</span>
           </span>
           <p style={{ color: '#333', fontSize: '0.78rem', fontFamily: "'Space Grotesk', sans-serif" }}>
-            Córdoba & Noreste, Argentina · 2026
+            Entre Ríos, Argentina · 2026
           </p>
           <p style={{ color: '#333', fontSize: '0.78rem', fontFamily: "'Space Grotesk', sans-serif" }}>
             Del sur del mundo. Para cualquier parte.

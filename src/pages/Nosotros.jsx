@@ -8,11 +8,10 @@ const virtudes = [
   { title: 'Sin humo', desc: 'Si algo no lo podemos hacer, lo decimos antes de arrancar. Si el proyecto no tiene sentido, también. El tiempo del cliente vale.' },
   { title: 'Tolerancia al proceso', desc: 'Entre el primer mensaje y el producto en producción hay semanas difíciles, cambios de dirección y bugs a las 11 de la noche. Eso no nos rompe.' },
   { title: 'Federales de verdad', desc: 'No somos una agencia de Buenos Aires que "entiende el interior". Vivimos acá. Nuestros clientes son de acá. Eso se nota.' },
-  { title: 'Sin egos', desc: 'Lo que Franco aprende del cliente lo usa Manu en el código. Lo que Manu descubre en la build lo lleva Franco a la siguiente conversación.' },
+  { title: 'Trato directo', desc: 'Hablás con quien construye el sistema. Sin intermediarios, sin teléfono descompuesto entre lo que pedís y lo que se programa.' },
 ]
 
 const team = [
-  { name: 'Franco', role: 'Product Analyst · Sales Lead', bio: 'Primera conversación con el cliente. No vende soluciones — escucha problemas. Su interés en finanzas y mercados le da perspectiva concreta sobre el costo real de los procesos manuales: sabe cuánto pierde un negocio por no tener el sistema correcto.', ubicacion: 'Córdoba, Argentina', highlight: 'Primero entiende el problema. Después habla de la solución.' },
   { name: 'Manu', role: 'Desarrollador Full-stack · Arquitecto técnico', bio: 'Construye el producto. Tiene tres aplicaciones en producción para clientes reales — ganadería, indumentaria, concesionaria — antes de que Suden Labs tuviera nombre. No hay demo que mostrar porque todo lo que hizo corre en producción hoy.', ubicacion: 'Entre Ríos, Argentina', highlight: 'No construye demos. Construye productos.' },
 ]
 
@@ -21,7 +20,7 @@ const manifesto = [
   'Laboratorio significa construir antes de prometer.',
   'El valor está en el producto funcionando, no en la propuesta bien presentada.',
   'Cada proyecto bien hecho es el argumento para el siguiente. Nunca al revés.',
-  'Dos personas del interior del país construyendo tecnología que antes solo llegaba a las empresas grandes.',
+  'Desde el interior del país, construyendo tecnología que antes solo llegaba a las empresas grandes.',
 ]
 
 export default function Nosotros() {
@@ -38,16 +37,16 @@ export default function Nosotros() {
         <div ref={heroRef} style={{ padding: '60px 0 80px', borderBottom: '1px solid var(--border)' }}>
           <p style={{ fontFamily: "'Space Grotesk', sans-serif", color: 'var(--green)', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '20px' }}>Nosotros</p>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', fontWeight: 700, letterSpacing: '-1.5px', maxWidth: '700px', marginBottom: '24px' }}>
-            Dos personas, del interior.<br /><span style={{ color: 'var(--text-sec)', fontWeight: 400 }}>Sin agencia, sin humo.</span>
+            Desde el interior.<br /><span style={{ color: 'var(--text-sec)', fontWeight: 400 }}>Sin agencia, sin humo.</span>
           </h1>
           <p style={{ color: 'var(--text-sec)', fontSize: '1rem', lineHeight: 1.75, maxWidth: '560px' }}>
-            Franco de Córdoba, Manu de Entre Ríos. Construimos tecnología para negocios reales que vemos de cerca. No somos una agencia ni una consultora — somos un laboratorio donde el producto va primero.
+            Desde Entre Ríos construimos tecnología para negocios reales que vemos de cerca. No somos una agencia ni una consultora — somos un laboratorio donde el producto va primero.
           </p>
         </div>
 
         {/* Team */}
         <div style={{ padding: '80px 0', borderBottom: '1px solid var(--border)' }}>
-          <p style={{ fontFamily: "'Space Grotesk', sans-serif", color: 'var(--green)', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '48px' }}>El equipo</p>
+          <p style={{ fontFamily: "'Space Grotesk', sans-serif", color: 'var(--green)', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '48px' }}>Quién lo construye</p>
           <div ref={teamRef} className="grid-2">
             {team.map((p, i) => (
               <div key={i} style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '12px', padding: '40px', transition: 'border-color 0.2s' }}

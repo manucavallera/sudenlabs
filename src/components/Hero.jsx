@@ -1,3 +1,4 @@
+import { waLink } from '../config'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
@@ -111,7 +112,7 @@ export default function Hero() {
       <div style={{ position: 'relative', maxWidth: '1100px', margin: '0 auto', width: '100%' }}>
         <p style={{ fontFamily: "'Space Grotesk', sans-serif", color: 'var(--green)', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '10px' }}>
           <span style={{ width: '7px', height: '7px', background: 'var(--green)', borderRadius: '50%', display: 'inline-block', animation: 'pulse-glow 2s ease-in-out infinite', flexShrink: 0 }} />
-          {isMobile ? 'Laboratorio de Productos Tecnológicos' : 'Laboratorio de Productos Tecnológicos · Córdoba, Argentina'}
+          {isMobile ? 'Laboratorio de Productos Tecnológicos' : 'Laboratorio de Productos Tecnológicos · Entre Ríos, Argentina'}
         </p>
 
         <h1 ref={headRef} style={{ fontSize: isMobile ? '2.4rem' : 'clamp(2.8rem, 6.5vw, 5.5rem)', fontWeight: 700, letterSpacing: '-2px', lineHeight: 1.05, marginBottom: '28px', maxWidth: '820px' }}>
@@ -121,11 +122,11 @@ export default function Hero() {
         </h1>
 
         <p ref={subRef} style={{ fontSize: '1rem', color: 'var(--text-sec)', maxWidth: '520px', lineHeight: 1.75, marginBottom: '40px' }}>
-          Dos personas. Tres productos en producción antes de tener nombre. Si existe la necesidad y la tecnología puede resolverla, lo construimos.
+          Software hecho en el interior, para negocios del interior. Productos en producción antes de tener nombre. Si existe la necesidad y la tecnología puede resolverla, lo construimos.
         </p>
 
         <div ref={ctaRef} style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '60px' }}>
-          <MagneticButton href="https://wa.me/5493434907989" primary>Contanos tu problema <span>→</span></MagneticButton>
+          <MagneticButton href={waLink()} primary>Contanos tu problema <span>→</span></MagneticButton>
           <MagneticButton to="/servicios">Ver qué construimos</MagneticButton>
         </div>
 

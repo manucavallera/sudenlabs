@@ -5,6 +5,7 @@ import { useTheme } from '../contexts/ThemeContext'
 const links = [
   { to: '/', label: 'Inicio' },
   { to: '/servicios', label: 'Servicios' },
+  { to: '/gestion', label: 'Concesionarias' },
   { to: '/proyectos', label: 'Proyectos' },
   { to: '/metodo', label: 'Método' },
   { to: '/nosotros', label: 'Nosotros' },
@@ -84,6 +85,7 @@ export default function Navbar() {
             fontSize: '1.25rem',
             color: 'var(--text)',
             letterSpacing: '-0.02em',
+            whiteSpace: 'nowrap',
           }}>Suden Labs</span>
         </Link>
 
