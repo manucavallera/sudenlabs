@@ -17,7 +17,7 @@
   --border:        #1A1A1A;
   --border-hover:  #2E2E2E;
   --dot:           #1A1A1A;
-  --stroke:        rgba(245,245,245,0.18);
+  --stroke:        rgba(245,245,245,0.5);
 }
 
 [data-theme="light"] {
@@ -31,7 +31,7 @@
   --border:        #E0E0E0;
   --border-hover:  #BBBBBB;
   --dot:           #D8D8D8;
-  --stroke:        rgba(13,13,13,0.18);
+  --stroke:        rgba(13,13,13,0.45);
   --green:         #1a8c00;
   --green-dim:     rgba(26, 140, 0, 0.1);
   --green-glow:    rgba(26, 140, 0, 0.3);

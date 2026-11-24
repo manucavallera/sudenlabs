@@ -4,15 +4,19 @@ import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { useIsMobile } from '../hooks/useIsMobile'
 
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+
 function useCountUp(target, duration = 1200) {
-  const [value, setValue] = useState(0)
+  // With reduced motion, show the final number right away instead of animating from 0.
+  const [value, setValue] = useState(() => (prefersReducedMotion() ? target : 0))
   const ref = useRef(null)
   const started = useRef(false)
   useEffect(() => {
     const el = ref.current
     if (!el) return
     const isNumeric = /^\d+$/.test(String(target))
-    if (!isNumeric) { setValue(target); return }
+    if (!isNumeric || prefersReducedMotion()) { setValue(target); return }
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !started.current) {
         started.current = true
@@ -27,7 +31,7 @@ function useCountUp(target, duration = 1200) {
         requestAnimationFrame(tick)
         observer.unobserve(el)
       }
-    }, { threshold: 0.5 })
+    }, { threshold: 0.15 })
     observer.observe(el)
     return () => observer.disconnect()
   }, [target, duration])
@@ -117,7 +121,7 @@ export default function Hero() {
 
         <h1 ref={headRef} style={{ fontSize: isMobile ? '2.4rem' : 'clamp(2.8rem, 6.5vw, 5.5rem)', fontWeight: 700, letterSpacing: '-2px', lineHeight: 1.05, marginBottom: '28px', maxWidth: '820px' }}>
           No somos una agencia.{' '}
-          <span style={{ color: 'transparent', WebkitTextStroke: '1px var(--stroke)' }}>Somos el laboratorio</span>{' '}
+          <span style={{ color: 'transparent', WebkitTextStroke: '1.5px var(--stroke)' }}>Somos el laboratorio</span>{' '}
           que resuelve el problema.
         </h1>
 
