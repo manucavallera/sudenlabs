@@ -2,3 +2,10 @@ node_modules
 dist
 .env
 .env.local
+
+# Local Netlify folder
+.netlify
+
+# Prospect lists and search notes: private, never in the public repo
+docs/prospectos.csv
+docs/prospectos-busquedas.md
