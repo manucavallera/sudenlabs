@@ -126,7 +126,7 @@ export default function Hero() {
         </h1>
 
         <p ref={subRef} style={{ fontSize: '1rem', color: 'var(--text-sec)', maxWidth: '520px', lineHeight: 1.75, marginBottom: '40px' }}>
-          Software hecho en el interior, para negocios del interior. Productos en producción antes de tener nombre. Si existe la necesidad y la tecnología puede resolverla, lo construimos.
+          Sistemas a medida e IA para pymes. Ves tu sistema funcionando antes de pagar.
         </p>
 
         <div ref={ctaRef} style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '60px' }}>
