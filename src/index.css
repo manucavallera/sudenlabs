@@ -12,9 +12,9 @@
   --bg-card:       #141414;
   --bg-card-hover: #1C1C1C;
   --text:          #F5F5F5;
-  --text-sec:      #888888;
-  --text-muted:    #666666;
-  --border:        #1A1A1A;
+  --text-sec:      #B8B8B8;
+  --text-muted:    #8E8E8E;
+  --border:        #262626;
   --border-hover:  #2E2E2E;
   --dot:           #1A1A1A;
   --stroke:        rgba(245,245,245,0.5);
@@ -26,8 +26,8 @@
   --bg-card:       #FFFFFF;
   --bg-card-hover: #F0F0F0;
   --text:          #0D0D0D;
-  --text-sec:      #555555;
-  --text-muted:    #AAAAAA;
+  --text-sec:      #4A4A4A;
+  --text-muted:    #6E6E6E;
   --border:        #E0E0E0;
   --border-hover:  #BBBBBB;
   --dot:           #D8D8D8;
